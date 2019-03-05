@@ -1,0 +1,11 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: shutdown
+  description: "終了処理"
+  commands:
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Pane[@Name=\"新しいタブ - Google Chrome\"][@ClassName=\"Chrome_WidgetWin_1\"]/Pane[@Name=\"Google Chrome\"]/Pane/Button[@Name=\"閉じる\"]"

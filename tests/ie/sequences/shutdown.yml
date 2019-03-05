@@ -1,0 +1,19 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: shutdown
+  description: "ie 終了処理"
+  commands:
+    # クリックで×がおせないのであきらめて alt + f4 で死ぬ
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"オムロン ソーシアル ソリューションズ - Google 検索 - Internet Explorer\"][@ClassName=\"IEFrame\"]/Pane[@ClassName=\"Frame Tab\"]/Pane[@Name=\"オムロン ソーシア ソリューションズ - Google 検索 - Internet Explorer\"][@ClassName=\"TabWindowClass\"]/Pane[@ClassName=\"Shell DocObject View\"]/Pane[starts-with(@Name,\"https://www.google.co.jp/search?source=hp&amp;ei=ttp8XMr5Mcqg8QXh27n\")][@ClassName=\"Internet Explorer_Server\"]/Pane[@AutomationId=\"gsr\"][@Name=\"オムロン ソーシア ソリューションズ - Google 検索\"]"
+    - name: set_text
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"オムロン ソーシアル ソリューションズ - Google 検索 - Internet Explorer\"][@ClassName=\"IEFrame\"]/Pane[@ClassName=\"Frame Tab\"]/Pane[@Name=\"オムロン ソーシア ソリューションズ - Google 検索 - Internet Explorer\"][@ClassName=\"TabWindowClass\"]/Pane[@ClassName=\"Shell DocObject View\"]/Pane[starts-with(@Name,\"https://www.google.co.jp/search?source=hp&amp;ei=ttp8XMr5Mcqg8QXh27n\")][@ClassName=\"Internet Explorer_Server\"]/Pane[@AutomationId=\"gsr\"][@Name=\"オムロン ソーシア ソリューションズ - Google 検索\"]"
+        text: ""
+        after_key_event: "alt + f4"
+
+

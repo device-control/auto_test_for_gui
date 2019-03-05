@@ -1,0 +1,25 @@
+# coding: utf-8
+content_type: screen_test_scenario
+content_version: 0.1
+
+contents:
+  name: arithmetic_operation
+  description: "四則演算を実施する"
+  config:
+    screenshots_path: "screenshots/calc/arithmetic_operation"
+  sequences:
+    # 起動処理
+    - boot
+    
+    # 加算
+    - operation_addition
+    # # 減算
+    # - operation_subtraction
+    # # 掛算
+    # - operation_multiplication
+    # # 割算
+    # - operation_division
+    
+    # 終了
+    - shutdown
+    

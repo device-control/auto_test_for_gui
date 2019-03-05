@@ -1,0 +1,22 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: oss_access
+  description: "OSS にアクセスする"
+  commands:
+    # 新しいタブをクリック
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Pane[@Name=\"新しいタブ - Google Chrome\"][@ClassName=\"Chrome_WidgetWin_1\"]"
+    # 検索エリアクリック
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Pane[@Name=\"新しいタブ - Google Chrome\"][@ClassName=\"Chrome_WidgetWin_1\"]/Pane[@Name=\"Google Chrome\"]/Pane[position()=1]/Pane/Pane[position()=1]/Group[position()=3]/Pane[position()=4]"
+    # OSS キーワード入力
+    - name: set_text
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Pane[@Name=\"新しいタブ - Google Chrome\"][@ClassName=\"Chrome_WidgetWin_1\"]/Pane[@Name=\"Google Chrome\"]/Pane[position()=1]/Pane/Pane[position()=1]/Group[position()=3]/Pane[position()=4]"
+        text: "オムロンソーシャルソリューション"
+        

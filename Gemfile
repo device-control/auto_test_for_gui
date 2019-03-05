@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+gem 'selenium-webdriver'
+gem 'appium_lib'
+# gem 'activesupport'
+
+gem "pry"
+gem 'pry-doc'
+gem 'pry-byebug'
+
+gem 'ocra'

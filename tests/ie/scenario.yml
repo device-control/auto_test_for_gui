@@ -1,0 +1,17 @@
+# coding: utf-8
+content_type: screen_test_scenario
+content_version: 0.1
+
+contents:
+  name: browse_of_oss
+  description: "ie で OSS にアクセスする"
+  config:
+    screenshots_path: "screenshots/ie/browse_of_oss"
+  sequences:
+    # 起動処理
+    - boot
+    # OSSにアクセス
+    - oss_access
+    # 終了
+    - shutdown
+    

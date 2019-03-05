@@ -1,0 +1,30 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: shutdown
+  description: "notepad 終了処理"
+  commands:
+    # file メニュー表示させる
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"無題 - メモ帳\"][@ClassName=\"Notepad\"]/MenuBar[@AutomationId=\"MenuBar\"][@Name=\"アプリケーション\"]/MenuItem[@Name=\"ファイル(F)\"]"
+    # file メニュー表示待ち
+    - name: wait_for_form
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"無題 - メモ帳\"][@ClassName=\"Notepad\"]/Menu[@Name=\"ファイル(F)\"][@ClassName=\"#32768\"]/MenuItem[@Name=\"メモ帳の終了(X)\"]"
+    # 終了選択
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"無題 - メモ帳\"][@ClassName=\"Notepad\"]/Menu[@Name=\"ファイル(F)\"][@ClassName=\"#32768\"]/MenuItem[@Name=\"メモ帳の終了(X)\"]"
+    # 終了ダイアログ表示待ち
+    - name: wait_for_form
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"無題 - メモ帳\"][@ClassName=\"Notepad\"]/Window[@Name=\"メモ帳\"][@ClassName=\"#32770\"]/Button[starts-with(@AutomationId,\"CommandButton_\")][@Name=\"保存しない(N)\"]"
+    # 終了ダイアログ 保存しない クリック
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"無題 - メモ帳\"][@ClassName=\"Notepad\"]/Window[@Name=\"メモ帳\"][@ClassName=\"#32770\"]/Button[starts-with(@AutomationId,\"CommandButton_\")][@Name=\"保存しない(N)\"]"
+
+

@@ -1,0 +1,12 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: shutdown
+  description: "終了処理"
+  commands:
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 ‎- 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@AutomationId=\"TitleBar\"][@Name=\"電卓 ‎- 電卓\"]/Button[@AutomationId=\"Close\"][@Name=\"電卓 ‎- 電卓 を閉じる\"]"
+        

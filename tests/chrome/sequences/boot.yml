@@ -1,0 +1,17 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: boot
+  description: "chrome 起動処理"
+  commands:
+    # app 起動
+    - name: exe_spawn
+      params:
+        exe_path: "\"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe\""
+        
+    # app 起動待ち
+    - name: wait_for_app
+      params:
+        class_name: "Chrome_WidgetWin_1"

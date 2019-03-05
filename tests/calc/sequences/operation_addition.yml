@@ -1,0 +1,57 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: operation_addition
+  description: "加算する"
+  commands:
+    # クリア(C)をクリック
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"DisplayControls\"][@Name=\"ディスプレイ コントロール\"]/Button[@AutomationId=\"clearButton\"][@Name=\"クリア\"]"
+    # 123 を入力
+    # 1
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"NumberPad\"][@Name=\"数字パッド\"]/Button[@AutomationId=\"num1Button\"][@Name=\"1\"]"
+    # 2
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"NumberPad\"][@Name=\"数字パッド\"]/Button[@AutomationId=\"num2Button\"][@Name=\"2\"]"
+    # 3
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"NumberPad\"][@Name=\"数字パッド\"]/Button[@AutomationId=\"num3Button\"][@Name=\"3\"]"
+    
+    # 加算(+)クリック
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"StandardOperators\"][@Name=\"標準演算子\"]/Button[@AutomationId=\"plusButton\"][@Name=\"プラス\"]"
+    
+    # 123 を入力
+    # 1
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"NumberPad\"][@Name=\"数字パッド\"]/Button[@AutomationId=\"num1Button\"][@Name=\"1\"]"
+    # 2
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"NumberPad\"][@Name=\"数字パッド\"]/Button[@AutomationId=\"num2Button\"][@Name=\"2\"]"
+    # 3
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"NumberPad\"][@Name=\"数字パッド\"]/Button[@AutomationId=\"num3Button\"][@Name=\"3\"]"
+    
+    # 演算(=)クリック
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Group[@AutomationId=\"StandardOperators\"][@Name=\"標準演算子\"]/Button[@AutomationId=\"equalButton\"][@Name=\"等号\"]"
+
+    - name: assert_text
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 - 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Text[@AutomationId=\"CalculatorResults\"]"
+        expected: 246
+        # "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 ‎- 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Text[@AutomationId=\"CalculatorResults\"][@Name=\"表示は 0 です\"]"
+        # "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 ‎- 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Text[@AutomationId=\"CalculatorResults\"][@Name=\"表示は 246 です\"]"
+

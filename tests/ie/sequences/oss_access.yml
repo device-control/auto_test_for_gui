@@ -1,0 +1,40 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: oss_access
+  description: "OSS にアクセスする"
+  commands:
+    # アドレスエリア クリック
+    - name: wait_for_form
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[starts-with(@Name,\"MSN Japan - ニュース, 天気, メール (Outlook, Hotmail), Bing検索, Skype - In\")][@ClassName=\"IEFrame\"]/Pane[@ClassName=\"ReBarWindow32\"]/Pane[@Name=\"アドレス バー\"][@ClassName=\"Address Band Root\"]/Edit[@Name=\"アドレスと Bing を使った検索\"][@ClassName=\"Edit\"]"
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[starts-with(@Name,\"MSN Japan - ニュース, 天気, メール (Outlook, Hotmail), Bing検索, Skype - In\")][@ClassName=\"IEFrame\"]/Pane[@ClassName=\"ReBarWindow32\"]/Pane[@Name=\"アドレス バー\"][@ClassName=\"Address Band Root\"]/Edit[@Name=\"アドレスと Bing を使った検索\"][@ClassName=\"Edit\"]"
+
+    # google.co.jp 入力後、エンター
+    - name: set_text
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[starts-with(@Name,\"MSN Japan - ニュース, 天気, メール (Outlook, Hotmail), Bing検索, Skype - In\")][@ClassName=\"IEFrame\"]/Pane[@ClassName=\"ReBarWindow32\"]/Pane[@Name=\"アドレス バー\"][@ClassName=\"Address Band Root\"]/Edit[@Name=\"アドレスと Bing を使った検索\"][@ClassName=\"Edit\"]"
+        text: "www.google.co.jp"
+        after_key_event: "enter"
+    # google 表示待ち
+    - name: wait_for_form
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"Google - Internet Explorer\"][@ClassName=\"IEFrame\"]"
+
+    # オムロンソーシャルソリューションズを検索
+    - name: click
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"Google - Internet Explorer\"][@ClassName=\"IEFrame\"]/Pane[@ClassName=\"Frame Tab\"]/Pane[@Name=\"Google - Internet Explorer\"][@ClassName=\"TabWindowClass\"]/Pane[@ClassName=\"Shell DocObject View\"]/Pane[@Name=\"https://www.google.co.jp/?gws_rd=ssl\"][@ClassName=\"Internet Explorer_Server\"]/Pane[@AutomationId=\"gsr\"][@Name=\"Google\"]/Group[@AutomationId=\"tsf\"][starts-with(@Name,\".emca{}.emcat{}.emcav{}.sbfc{}.A8SBwf{position:relative;margin:0\")]/ComboBox[@Name=\"検索\"]"
+    - name: set_text
+      params:
+        xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"Google - Internet Explorer\"][@ClassName=\"IEFrame\"]/Pane[@ClassName=\"Frame Tab\"]/Pane[@Name=\"Google - Internet Explorer\"][@ClassName=\"TabWindowClass\"]/Pane[@ClassName=\"Shell DocObject View\"]/Pane[@Name=\"https://www.google.co.jp/?gws_rd=ssl\"][@ClassName=\"Internet Explorer_Server\"]/Pane[@AutomationId=\"gsr\"][@Name=\"Google\"]/Group[@AutomationId=\"tsf\"][starts-with(@Name,\".emca{}.emcat{}.emcav{}.sbfc{}.A8SBwf{position:relative;margin:0\")]/ComboBox[@Name=\"検索\"]"
+        text: "オムロン ソーシアル ソリューションズ"
+        after_key_event: "enter"
+    
+    - name: sleep
+      params:
+        time: 5000

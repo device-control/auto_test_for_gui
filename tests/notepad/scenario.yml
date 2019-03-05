@@ -1,0 +1,17 @@
+# coding: utf-8
+content_type: screen_test_scenario
+content_version: 0.1
+
+contents:
+  name: memo
+  description: "notepad でメモ書きする"
+  config:
+    screenshots_path: "screenshots/notepad/memo"
+  sequences:
+    # 起動処理
+    - boot
+    # メモする
+    - write_memo
+    # 終了
+    - shutdown
+    
