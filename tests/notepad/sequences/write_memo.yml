@@ -28,7 +28,7 @@ contents:
     - name: set_text
       params:
         xpath: "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"無題 - メモ帳\"][@ClassName=\"Notepad\"]/Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
-        text: "特定コントロールの内容のチェックもでる。"
+        text: "特定コントロールの内容のチェックもできる。"
         after_key_event: enter
     - name: set_text
       params:
