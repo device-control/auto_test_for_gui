@@ -34,6 +34,10 @@ class TestRunner
     )
     config = @scenario[:config]
     @screenshots_path = config[:screenshots_path] # './screenshots'
+    @screenshots_auto = true # デフォルトはtrueで指定されたらそれに従う
+    if config.has_key? :screenshots_auto
+      @screenshots_auto = config[:screenshots_auto]
+    end
     FileUtils.mkdir_p(@screenshots_path)
   end
 
@@ -128,7 +132,10 @@ class TestRunner
           params[:xpath].match(/@AutomationId=\"(frm.+?)\"/) do |md|
             png_file = format("%03d", command_index) + "_" + md[1] + ".png"
           end
-          @driver.save_screenshot(spath + '/' + png_file)
+          # 自動キャプチャ有効／無効チェック
+          if @screenshots_auto
+            @driver.save_screenshot(spath + '/' + png_file)
+          end
         elsif name == 'set_text'
           # set_text(params[:xpath], params[:text])
           set_text(params)
